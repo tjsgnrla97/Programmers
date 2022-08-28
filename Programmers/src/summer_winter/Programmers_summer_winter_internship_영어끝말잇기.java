@@ -22,17 +22,17 @@ public class Programmers_summer_winter_internship_영어끝말잇기 {
         char lastWord = words[0].charAt(0);
         //제시된 단어
         HashSet<String> suggested = new HashSet<>();
-        for(int i=0; i<words.length; i++){
+        for (int i = 0; i < words.length; i++) {
             String str = words[i];
-            if(suggested.contains(str) || str.charAt(0) != lastWord){
+            if (suggested.contains(str) || str.charAt(0) != lastWord) {
                 answer[0] = currentMember;
                 answer[1] = currentRound;
                 break;
             }
-            lastWord = str.charAt(str.length()-1);
+            lastWord = str.charAt(str.length() - 1);
             suggested.add(str);
             currentMember++;
-            if(currentMember>n){
+            if (currentMember > n) {
                 currentMember = 1;
                 currentRound++;
             }
